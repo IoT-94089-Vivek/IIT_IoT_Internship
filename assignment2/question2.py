@@ -1,32 +1,14 @@
-num = int(input("enter 5 digit no :"))
+num = int(input("Enter a 5 digit number: "))
 
-def len(i):
-    u=0
-    l =int(i)
-    for k in range(1,100):
-        if(l!=0):
-           l= l/10
-           u=u+1 
-           l=int(l) 
-    return u
+temp = num
+rev = 0
 
-def rev(m):
-    while num > len(num):
-        d = m % 10
-        d = int(d) 
-        re = re * 10 + d
-    return re    
+while temp > 0:
+    digit = temp % 10
+    rev = rev * 10 + digit
+    temp = temp // 10
 
-if len(num)== 5:
-    print(f"the no is :{num}")
-    r =  rev(num)
-    
-    if num == r:
-        print("the no is palindrom")
-    else:
-        print("the no is not palindrom")
-    
-     
-    
-  
-   
+if num == rev:
+    print("Palindrome number")
+else:
+    print("Not a palindrome")
